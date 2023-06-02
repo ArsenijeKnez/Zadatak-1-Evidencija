@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Database.XML {
     public class AuditXMLTable {
-        private const string xmlFilePath = "Database/TBL_AUDIT.xml";
+        private const string xmlFilePath = "TBL_AUDIT.xml";
 
         public void Insert(Audit audit) {
             List<string> lines = new List<string>(File.ReadAllLines(xmlFilePath));

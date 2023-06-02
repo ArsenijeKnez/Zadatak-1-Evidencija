@@ -4,3 +4,9 @@ C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Comm
 C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Common\obj\Debug\Common.dll
 C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Common\obj\Debug\Common.pdb
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\bin\Debug\Common.dll
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\bin\Debug\Common.pdb
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\obj\Debug\Common.dll
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Evidencija\Common\obj\Debug\Common.pdb

@@ -20,16 +20,16 @@ namespace Database.XML {
         }
 
         private void CreateXMLFiles() {
-            if (!File.Exists("Database/TBL_AUDIT.xml")) {
-                CreateXMLFile("Database/TBL_AUDIT.xml");
+            if (!File.Exists("TBL_AUDIT.xml")) {
+                CreateXMLFile("TBL_AUDIT.xml");
             }
 
-            if (!File.Exists("Database/TBL_IMPORTED_FILE.xml")) {
-                CreateXMLFile("Database/TBL_IMPORTED_FILE.xml");
+            if (!File.Exists("TBL_IMPORTED_FILE.xml")) {
+                CreateXMLFile("TBL_IMPORTED_FILE.xml");
             }
 
-            if (!File.Exists("Database/TBL_LOAD.xml")) {
-                CreateXMLFile("Database/TBL_LOAD.xml");
+            if (!File.Exists("TBL_LOAD.xml")) {
+                CreateXMLFile("TBL_LOAD.xml");
             }
         }
 

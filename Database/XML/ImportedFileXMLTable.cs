@@ -9,7 +9,7 @@ using static Common.Enums;
 
 namespace Database.XML {
     public class ImportedFileXMLTable {
-        private const string xmlFilePath = "Database/TBL_IMPORTED_FILE.xml";
+        private const string xmlFilePath = "TBL_IMPORTED_FILE.xml";
         public void Insert(ImportedFile importedFile) {
             List<string> lines = new List<string>(File.ReadAllLines(xmlFilePath));
             int endLineIndex = -1;
