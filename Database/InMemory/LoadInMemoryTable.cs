@@ -9,12 +9,15 @@ using static Common.Enums;
 namespace Database.InMemory {
     public class LoadInMemoryTable {
         private Dictionary<int, Load> loadTable = new Dictionary<int, Load>();
-        public void Insert(Load load, FileType fileType) {
-            if (loadTable.ContainsKey(load.Id)) {
-                Update(load, fileType);
-            } else {
-                loadTable.Add(load.Id, load);
+
+        public void Insert(Load newLoad, FileType fileType) {
+            foreach (Load load in loadTable.Values) {
+                if (newLoad.Timestamp == load.Timestamp) {
+                    Update(newLoad, load, fileType);
+                }
             }
+
+            loadTable.Add(newLoad.Id, newLoad);
         }
 
         public List<Load> ReadForDeviationCalculation() {
@@ -31,21 +34,23 @@ namespace Database.InMemory {
 
         public void UpdateDeviations(List<Load> loads, DeviationType deviationType) {
             foreach (Load load in loads) {
-                if (deviationType == DeviationType.SquDeviation) {
-                    loadTable[load.Id].SquaredDeviation = load.SquaredDeviation;
-                } else {
-                    loadTable[load.Id].AbsolutePercentageDeviation = load.AbsolutePercentageDeviation;
+                if (loadTable.Values.Count > 0) {
+                    if (deviationType == DeviationType.SquDeviation) {
+                        loadTable[load.Id].SquaredDeviation = load.SquaredDeviation;
+                    } else {
+                        loadTable[load.Id].AbsolutePercentageDeviation = load.AbsolutePercentageDeviation;
+                    }
                 }
             }
         }
 
-        private void Update(Load load, FileType fileType) {
+        private void Update(Load newLoad, Load load, FileType fileType) {
             if (fileType == FileType.Ostv) {
-                loadTable[load.Id].ForecastValue = load.ForecastValue;
-                loadTable[load.Id].ForecastFileID = load.ForecastFileID;
+                load.ForecastValue = newLoad.ForecastValue;
+                load.ForecastFileID = newLoad.ForecastFileID;
             } else {
-                loadTable[load.Id].MeasuredValue = load.MeasuredValue;
-                loadTable[load.Id].MeasuredFileId = load.MeasuredFileId;
+                load.MeasuredValue = newLoad.MeasuredValue;
+                load.MeasuredFileId = newLoad.MeasuredFileId;
             }
         }
     }
