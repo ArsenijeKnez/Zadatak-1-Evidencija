@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\bin\Debug\Database.dll
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\bin\Debug\Database.pdb
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\bin\Debug\Common.dll
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\bin\Debug\Common.pdb
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\obj\Debug\Database.csproj.CopyComplete
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\obj\Debug\Database.dll
+C:\Users\User\Desktop\fakultet\treca godina\drugi semestar\VP\projekat\Repo\Database\obj\Debug\Database.pdb
