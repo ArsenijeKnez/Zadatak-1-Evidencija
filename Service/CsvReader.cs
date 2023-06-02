@@ -88,7 +88,15 @@ namespace Service {
             string deviationCalculationMethod = ConfigurationManager.AppSettings["DeviationCalculationMethod"];
             Deviation dev = new Deviation();
             List<Load> loads = database.ReadLoadsForDeviationCalculation();
-            dev.DatabaseUpdate += UpdateDatabase;
+
+            dev.DatabaseUpdate += (load) => {
+                if (database.DBType() == DatabaseType.InMemory)
+                    dev.CalculateDeviation(loads, dev.InMemWrite);
+                else
+                    dev.CalculateDeviation(loads, dev.XMLWrite);
+            };
+
+
             switch (deviationCalculationMethod)
             {
                 case "AbsDeviation":
@@ -100,14 +108,6 @@ namespace Service {
                 default:
                     throw new ConfigurationErrorsException("Niste dobro uneli konfiguraciju proracuna u App.config(AbsDeviation ili SquDeviation).");
             }
-        }
-        private void UpdateDatabase(List<Load> loads)
-        {
-            Deviation dev = new Deviation();
-            if (database.DBType() == DatabaseType.InMemory)
-                dev.CalculateDeviation(loads, dev.InMemWrite);
-            else
-                dev.CalculateDeviation(loads, dev.XMLWrite);
         }
 
         private bool IsFileValid(List<string> lines, string fileName) {
